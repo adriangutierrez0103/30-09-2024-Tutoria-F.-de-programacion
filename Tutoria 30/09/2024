@@ -1,0 +1,35 @@
+
+#include <iostream>
+using namespace std;
+int main()
+{ int Hora, Minuto, Segundo;
+string Periodo;
+    
+
+    cout << "Ingrese la hora: ";
+    cin >> Hora;
+
+    cout << "Ingrese el minuto: ";
+    cin >> Minuto;
+    
+    cout << "Ingrese el Segundo: ";
+    cin >> Segundo;
+    
+    if (Hora>=13||Hora<=24){
+    Hora= Hora - 12;
+    Periodo= "Pm";
+    cout<< "La hora es: "<<Hora<< ":"<<Minuto<<":"<<Segundo<<Periodo<<endl;}
+    
+    else if (Hora>=01||Hora<=12){
+        Periodo= "Am";
+    cout<< "La hora es: "<<Hora<< ":"<<Minuto<<":"<<Segundo<<Periodo<<endl;}
+    
+    else if (Hora>=25){
+    cout<<"Datos ingresados fuera del rango de hora. "<<endl;}
+    else if(Hora== 24){
+        Hora= 0;
+        Periodo= "Am";
+         cout<< "La hora es: "<<Hora<< ":"<<Minuto<<":"<<Segundo<<Periodo<<endl;}
+    }
+    return 0;
+}
